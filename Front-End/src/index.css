@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #505D22;
+  --secondary-color: #ECE9D2;
+  --third-color: #FAF3DD;
+  --fourth-color: #F7F6F6;
+  --text-color: #5B6946;
+}
+
+/* Headings */
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 160px;
+  color: var(--text-color);
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+}
+
+h3 {
+  font-family: "Arimo", sans-serif;
+  font-size: 24px;
+}
+
+h4 {
+  font-family: "Anton", sans-serif; /* for logo */
+  font-size: 25px;
+}
+
+/* Body text */
+body {
+  font-family: "Arimo", sans-serif;
+  font-size: 16px;
+}
+
+p {
+  font-family: "Arimo", sans-serif;
+  font-size: 16px;
+  color: var(--text-color);
+}

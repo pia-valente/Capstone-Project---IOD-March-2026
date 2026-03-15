@@ -1,0 +1,25 @@
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--third-color);
+    margin: 0;
+}
+
+.strength-and-flow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    width: 40vw;
+    padding: 100px 25px;
+
+
+}
+
+.home-title {
+    font-family: "Playfair Display", serif;
+    font-size: 160px;
+    color: var(--text-color);
+    letter-spacing: -8px;
+    line-height: .9;
+}
