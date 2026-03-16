@@ -1,0 +1,9 @@
+/*NOT WORKING - MUI button have their own internal styling with higher CSS. Better use sx prop*/
+
+.customButton {
+    color: var(--primary-color); 
+    font-size: 60px;
+    padding: 2px 2px;
+    min-width: 200px;
+    border-radius: 8px;
+}

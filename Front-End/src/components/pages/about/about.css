@@ -1,9 +1,21 @@
 .about-container {
-    height: 100vh;
+    box-sizing: border-box;
+    overflow: visible;
     width: 100vw;
+    height: 100vh;
     background-color: var(--secondary-color);
     margin: 0;
 }
+
+.about-text-container {
+    /*background-color: pink;*/
+    margin-top: 20px;
+}
+
+.about-photo-container {
+
+}
+
 
 body {
     margin: 0;

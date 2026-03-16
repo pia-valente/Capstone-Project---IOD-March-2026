@@ -1,6 +1,7 @@
 import React from "react";
 import "./programs.css";
 import { useTheme } from "@mui/material/styles";
+import { Box, Typography } from "@mui/material";
 
 function Programs() {
   return (

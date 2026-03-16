@@ -1,3 +1,5 @@
+
+
 :root {
   --primary-color: #505D22;
   --secondary-color: #ECE9D2;
@@ -20,7 +22,7 @@ h2 {
 
 h3 {
   font-family: "Arimo", sans-serif;
-  font-size: 24px;
+  font-size: 36px;
 }
 
 h4 {
