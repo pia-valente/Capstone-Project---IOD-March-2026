@@ -1,21 +1,21 @@
 import Button from "@mui/material/Button";
 
-function AppButton() {
+function whiteButton({children}) {
   return (
     <Button
       variant="contained"
       sx={{
-        color: "var(--third-color)",
-        backgroundColor: "var(--primary-color)",
+        color: "var(--primary-color)",
+        backgroundColor: "var(--third-color)",
         fontSize: "30px",
         padding: "8px 16px",
         minWidth: "100px",
         borderRadius: "30px",
       }}
     >
-      TRY FOR 7 DAYS
+      {children}
     </Button>
   );
 }
 
-export default AppButton;
+export default whiteButton;

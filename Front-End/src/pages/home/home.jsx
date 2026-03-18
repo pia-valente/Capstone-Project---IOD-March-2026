@@ -1,12 +1,12 @@
 import React from "react";
 import "./home.css";
-import { useTheme } from "@mui/material/styles";
-import NavBar from "../../navbar/navbar";
+import NavBar from "../../components/navbar/navbar";
 import Box from "@mui/material/Box";
-import AppButton from "../../buttons/buttons";
+import GreenButton from "../../components/buttons/greenButton/greenButton";
 import { Element } from "react-scroll";
 import About from "../about/about";
 import Programs from "../programs/programs"
+import Contact from "../contact/contact";
 
 function Home() {
   return (
@@ -20,7 +20,7 @@ function Home() {
               Flow<br></br>
             </h1>
             <h3 className="secondary-title">Move Strong. Flow Free.</h3>
-            <AppButton></AppButton>
+            <GreenButton>TRY FOR 7 DAYS</GreenButton>
           </Box>
       
           <Box className="home-photo-container" display="flex" flexDirection= "column">
@@ -45,6 +45,10 @@ function Home() {
 
       <Element name = "programs-page">
         <Programs></Programs>
+      </Element>
+
+      <Element name = "contact-page">
+        <Contact></Contact>
       </Element>
       
     </>

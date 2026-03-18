@@ -18,6 +18,7 @@ function Navbar() {
                 <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Home</Button>
                 <ScrollLink to ="about" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>About</Button></ScrollLink>
                 <ScrollLink to ="programs" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Programs</Button></ScrollLink>
+                <ScrollLink to ="contact" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Contact</Button></ScrollLink>
 
                 
                 

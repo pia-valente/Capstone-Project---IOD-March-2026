@@ -1,0 +1,85 @@
+.programs-page-container {
+    box-sizing: border-box;
+    overflow: visible;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--fourth-color);
+    margin: 0;
+}
+
+.what-we-do-container {
+
+}
+
+.cards-container {
+    width: 100vw
+}
+
+.programs-container {
+    background-color: var(--secondary-color);
+    min-height: 100vh;
+    margin-top: 50px
+}
+
+.left-side-container {
+    /*background-color: pink;*/
+    width: 50vw
+}
+
+.right-side-container {
+    /*background-color: orange;*/
+    width: 50vw
+}
+
+.ropeflow-container {
+    /*background-color: yellow;*/
+    height: 20vh;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding:  10px 50px 20px 60px
+}
+
+.kettlebell-container {
+    /*background-color: blue;*/
+    height: 25vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 50px 50px 20px 60px
+}
+
+.steelmace-container {
+    /*background-color: red;*/
+    height: 20vh;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding:  10px 60px 20px 50px
+}
+
+.clubbell-container {
+    /*background-color: green;*/
+    height: 25vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 50px 60px 20px 50px
+}
+
+.online-coaching-container {
+    
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}   
+
+h1 {
+    margin: 0
+}
+
+h3 {
+  font-family: "Arimo", sans-serif;
+  font-size: 36px;
+
+}
