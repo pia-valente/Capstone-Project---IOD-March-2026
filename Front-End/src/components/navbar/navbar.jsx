@@ -7,7 +7,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 
 
-function Navbar() {
+
+function Navbar({onLoginClick}) {
   return (
     <Box sx={{ width: "100%", backgroundColor: "var(--third-color)"}}>
       <AppBar position="sticky" color="third" elevation={0} >
@@ -16,9 +17,13 @@ function Navbar() {
 
             <Box sx={{ display: "flex", gap: 2 }}>
                 <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Home</Button>
+                
                 <ScrollLink to ="about" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>About</Button></ScrollLink>
                 <ScrollLink to ="programs" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Programs</Button></ScrollLink>
                 <ScrollLink to ="contact" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Contact</Button></ScrollLink>
+                <ScrollLink to ="community" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Project Flow</Button></ScrollLink>
+                <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }} onClick={onLoginClick}>Login</Button>
+                <ScrollLink to ="client-page" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>User Page</Button></ScrollLink>
 
                 
                 
@@ -32,10 +37,16 @@ function Navbar() {
 export default Navbar
 
 
-/*<Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/programs" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Programs</Button>
-                <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/community" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Community</Button>
-                <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/contact" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Contact</Button>
-                <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/login" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Login</Button>
+/*
+
+<Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }} component={NavLink} to ="Signup" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Sign Up</Button>
+
+                
+
+<Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/programs" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Programs</Button>
+<Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/community" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Community</Button>
+Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/contact" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Contact</Button>
+<Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/login" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Login</Button>
             </ScrollLink>*/
 
 

@@ -4,9 +4,13 @@ import NavBar from "../../components/navbar/navbar";
 import Box from "@mui/material/Box";
 import GreenButton from "../../components/buttons/greenButton/greenButton";
 import { Element } from "react-scroll";
-import About from "../about/about";
-import Programs from "../programs/programs"
-import Contact from "../contact/contact";
+import About from "../about page/about";
+import Programs from "../programs page/programs"
+import Contact from "../contact page/contact";
+import Community from "../project-flow page/community"; //Project-flow
+import ClientPage from "../user-page/user-page";
+
+
 
 function Home() {
   return (
@@ -50,6 +54,18 @@ function Home() {
       <Element name = "contact-page">
         <Contact></Contact>
       </Element>
+
+      <Element name = "community-page">
+        <Community></Community>
+      </Element>
+
+      <Element name = "client-page-page">
+        <ClientPage></ClientPage>
+      </Element>
+
+      
+
+      
       
     </>
   );

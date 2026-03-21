@@ -1,0 +1,80 @@
+.user-page-container {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--third-color);
+    margin: 0;
+}
+
+/*LEFT SIDE*/
+.left-user-page-container {
+    background-color: var(--primary-color);
+    width: 30vw;
+    height: 100vh;
+    padding: 0px
+}
+
+.left-user-page-container h3 {
+    box-sizing: border-box;
+    color: var(--third-color);
+    margin: 0px;
+    padding: 40px 0px 0px 0px; 
+}
+
+.left-user-page-container h5 {
+    box-sizing: border-box;
+    color: var(--third-color);
+    margin: 0px;
+    padding: 0px 0px 0px 0px; 
+}
+
+.membership-details-container {
+    box-sizing: border-box;
+    color: var(--third-color);
+    gap: 8px;
+    padding: 0px 0px 0px 80px;
+}
+
+.membership-details-container h5 {
+    font-weight: 300;
+
+}
+
+.personal-details-container {
+    box-sizing: border-box;
+    color: var(--third-color);
+    gap: 8px;
+    padding: 0px 0px 0px 80px;
+}
+
+.personal-details-container h5 {
+    font-weight: 300;
+
+}
+
+
+
+
+/*RIGHT SIDE*/
+.right-user-page-container {
+    margin: 0px 0 0 0px;
+    padding: 0px;
+}
+
+.welcome-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.welcome-container h2 {
+    margin: 0px;
+    padding: 0px 0px 0px 40px;
+}
+
+.chart-container h5 {
+    color: var(--primary-color);
+    margin: 0px;
+    padding: 60px 0px 0px 40px;
+
+}

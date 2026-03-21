@@ -1,0 +1,31 @@
+.community-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--fourth-color);
+    margin: 0;
+}
+
+.left-community-container {
+    /*background-color: pink;*/
+    width: 50vw;
+}
+
+.right-community-container {
+    width: 50vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}   
+
+h2 {
+    margin: 200px 0px 60px 0;
+    padding: 0px 0px 0px 50px;
+    line-height: 1
+}
+
+p {
+    padding: 0px 0px 0px 50px;
+    align-self: right
+}

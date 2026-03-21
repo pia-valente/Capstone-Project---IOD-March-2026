@@ -1,0 +1,30 @@
+.loginbox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-Items: center;
+    box-sizing: border-box;
+    width: 500px;
+    height: 500px;
+    border:10px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: var(--third-color);
+}
+
+.loginbox-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.loginbox-container h2 {
+    font-size: 40px;
+    margin: 10px 2px 50px 0px;
+    text-align: center;
+    padding: 0
+}
+
+.loginbox-container p {
+    padding: 0
+}

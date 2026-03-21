@@ -1,0 +1,6 @@
+/*NOT FUNCTIONING *@mui/x-charts renders bars using inline SVG, normal CSS selectors don’t work.*/
+
+.custom-bar-chart {
+  --bar-color: var(--primary-color);
+  --axis-label-color: var(--primary-color);
+}

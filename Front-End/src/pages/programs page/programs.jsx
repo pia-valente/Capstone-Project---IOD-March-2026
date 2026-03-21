@@ -1,7 +1,7 @@
 import React from "react";
 import "./programs.css";
 import { Box, Typography } from "@mui/material";
-import CardItem from "../../components/cards/cards";
+import ProgramCards from "../../components/cards/programCards";
 
 const cardData = [
   {
@@ -47,7 +47,7 @@ function Programs() {
         {/*cards container. CARDS WILL BE SIDE-BY-SIDE*/}
         <Box className="cards-container" display="flex" flexDirection="row" justifyContent="center" alignItems="flex-start" gap={2}>
           {cardData.map((card, index) => (
-            <CardItem
+            <ProgramCards
               key={index}
               image={card.image}
               program={card.program}

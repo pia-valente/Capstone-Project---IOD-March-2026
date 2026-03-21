@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import "./contact.css";
 import WhiteButton from "../../components/buttons/whiteButton/whiteButton";
+import ReviewCard from "../../components/cards/reviewCards/reviewCards";
 
 function Contact() {
   return (
@@ -12,14 +13,10 @@ function Contact() {
           <WhiteButton>Book a Consultation</WhiteButton>
       </Box>
 
-
       <Box>
+        <ReviewCard></ReviewCard>
 
       </Box>
-       
-      
-
-
 
     </Box>
 

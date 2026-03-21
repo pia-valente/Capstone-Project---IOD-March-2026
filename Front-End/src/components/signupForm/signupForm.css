@@ -1,0 +1,35 @@
+.signup-container {
+    background-color: var(--third-color);
+    display: flex;
+    box-sizing: border-box;
+    width: 60vw;
+    margin: 10px;
+    border:10px solid var(--primary-color);
+    border-radius: 20px;
+
+}
+
+.signup-container h2 {
+    font-size: 40px;
+    margin: 40px 2px 50px 0px;
+    text-align: center;
+    padding: 0
+}
+
+.signup-container form {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    gap: 8px;
+}
+
+.birthday-gender {
+    display: flex;
+    gap: 12px
+}
+
+.signup-container form button {
+    margin: 16px auto 30px auto;  
+    display: block;            
+}
+
