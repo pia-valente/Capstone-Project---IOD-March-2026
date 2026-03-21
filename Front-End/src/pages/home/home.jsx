@@ -8,7 +8,6 @@ import About from "../about page/about";
 import Programs from "../programs page/programs"
 import Contact from "../contact page/contact";
 import Community from "../project-flow page/community"; //Project-flow
-import ClientPage from "../user-page/user-page";
 
 
 
@@ -58,11 +57,6 @@ function Home() {
       <Element name = "community-page">
         <Community></Community>
       </Element>
-
-      <Element name = "client-page-page">
-        <ClientPage></ClientPage>
-      </Element>
-
       
 
       

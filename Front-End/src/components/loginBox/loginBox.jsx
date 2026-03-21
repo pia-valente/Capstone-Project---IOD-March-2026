@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import { TextField, Button, Container, Typography, Box } from "@mui/material";
-import { Link } from "react-router-dom"
+import { TextField, Box } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom"
 import "./loginBox.css"
 import GreenButton from "../buttons/greenButton/greenButton";
-import SignupForm from "../signupForm/signupForm";
+
 
 function LoginBox () {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Login attempt with:", { email, password });
+    navigate("/userpage");
   };
 
   return (

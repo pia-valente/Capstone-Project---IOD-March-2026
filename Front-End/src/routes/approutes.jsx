@@ -5,8 +5,10 @@ import About from '../pages/about page/about.jsx';
 import Programs from '../pages/programs page/programs.jsx';
 import Contact from '../pages/contact page/contact.jsx';
 import Community from '../pages/project-flow page/community.jsx';   
+import UserPage from '../pages/user-page/user-page.jsx';
 import Login from '../pages/login/login.jsx';     
 import Signup from '../pages/signup page/signup.jsx';
+import Admin from '../pages/admin page/admin.jsx';
 
 
 function AppRoutes() {
@@ -19,8 +21,9 @@ function AppRoutes() {
       <Route path="/community" element={<Community></Community>}></Route>
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/signup" element={<Signup></Signup>}></Route>
+      <Route path="/userpage" element={<UserPage></UserPage>}></Route>
+      <Route path="/adminpage" element={<Admin></Admin>}></Route>
 
-     
     </Routes>
   );
 }
