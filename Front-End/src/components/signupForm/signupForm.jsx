@@ -54,7 +54,11 @@ function SignupForm({ onSubmit }) {
         
         <h2>Sign Up</h2>
         <form onSubmit={handleSubmit}>
-          <TextField name="name" label="Full Name" variant="filled" fullWidth value={formData.name} onChange={handleChange}/>
+          <Box className="birthday-gender" display="flex" flexDirection="row">
+            <TextField name="firstName" label="First Name" variant="filled" fullWidth value={formData.name} onChange={handleChange}/>
+            <TextField name="lastName" label="Last Name" variant="filled" fullWidth value={formData.name} onChange={handleChange}/>
+          </Box>
+
           <TextField name="email" label="Email" variant="filled" fullWidth value={formData.email} onChange={handleChange}/>
           <TextField name="password" label="Password" type="password" variant="filled" fullWidth value={formData.password} onChange={handleChange}/>
           <TextField name="mobile" label="Mobile" variant="filled" fullWidth value={formData.mobile} onChange={handleChange}/>

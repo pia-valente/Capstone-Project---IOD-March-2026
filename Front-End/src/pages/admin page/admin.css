@@ -1,0 +1,21 @@
+.admin-page-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--third-color);
+    padding: 0px;
+    margin: 0px
+    
+}
+
+.admin-page-container h2 {
+    padding: 0px;
+    margin-top: 40px
+}
+
+.data-container {
+    /*background-color: pink;*/
+    width: 90vw;
+    height: 80vh;
+    margin-top: 0px;
+    padding: 0px
+}
