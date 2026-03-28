@@ -1,17 +1,21 @@
 const express = require("express"); //import
+const cors = require("cors"); //enable CORS
 const app = express();  //run
 require("dotenv").config();
-let dbConnect = require("./dbConnect");
 
-// sequelize instance
+const dbConnect = require("./dbConnect"); // sequelize instance
 const sequelizeInstance = dbConnect.Sequelize;
 
 //import routes
-let coachRoutes = require("./routes/coachRoutes");
-let memberRoutes = require("./routes/memberRoutes");
-let memberProgramRoutes = require("./routes/memberProgramRoutes");
-let paymentPlanRoutes = require("./routes/paymentPlanRoutes");
-let programRoutes = require("./routes/programRoutes");
+const coachRoutes = require("./routes/coachRoutes");
+const memberRoutes = require("./routes/memberRoutes");
+const memberProgramRoutes = require("./routes/memberProgramRoutes");
+const paymentPlanRoutes = require("./routes/paymentPlanRoutes");
+const programRoutes = require("./routes/programRoutes");
+
+
+//enable CORS so frontend can make a request
+app.use(cors());
 
 // parse requests of content-type - application/json
 app.use(express.json());
@@ -22,6 +26,7 @@ app.use("/api/members", memberRoutes);
 app.use("/api/memberPrograms", memberProgramRoutes);
 app.use("/api/paymentPlans", paymentPlanRoutes);
 app.use("/api/programs", programRoutes);
+
 
 //default route
 app.get("/", (req, res) => {

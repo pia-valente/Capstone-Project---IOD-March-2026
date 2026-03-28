@@ -1,6 +1,6 @@
 .home-container {
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
     width: 100vw;
     height: 100vh;
     background-color: var(--third-color);

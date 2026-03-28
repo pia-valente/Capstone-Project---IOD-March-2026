@@ -7,7 +7,9 @@ function SignupPage() {
     return (
         <Box className="signup-page-container" display="flex" flexDirection="column">
             <Box className= "signup-form-container"  display= "flex" justifyContent="center"  alignContent="center" alignItems= "center" >
-                <SignupForm></SignupForm>
+                <SignupForm onNewMember = {(member) => {
+                    console.log("New member added")
+                }}></SignupForm>
             </Box>
         </Box>
        

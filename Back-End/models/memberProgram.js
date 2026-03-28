@@ -1,4 +1,4 @@
-const { DataTypes, Model } = require("sequelize"); // import data types and model
+const { DataTypes, Model, NOW } = require("sequelize"); // import data types and model
 
 let dbConnect = require("../dbConnect"); // import connection
 
@@ -13,6 +13,7 @@ MemberProgram.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
+      autoIncrement: true,
     },
     memberID: {
       type: DataTypes.INTEGER,
@@ -44,6 +45,7 @@ MemberProgram.init(
     start_date: {
       type: DataTypes.DATEONLY,
       allowNull: false,
+      defaultValue: DataTypes.NOW
     },
     paymentMethod: {
       type: DataTypes.ENUM(
@@ -57,6 +59,7 @@ MemberProgram.init(
     is_active: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
+      defaultValue: DataTypes.NOW
     },
   },
   {

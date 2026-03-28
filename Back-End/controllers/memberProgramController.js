@@ -3,7 +3,7 @@ const Models = require("../models");
 
 // Get all member programs
 const getMemberProgram = (res) => {
-  Models.MemberProgram.findAll({})
+  Models.MemberProgram.findAll({include: [Models.Member, Models.Programs, Models.PaymentPlan]})
     .then((data) => {
       res.send({ result: 200, data: data });
     })

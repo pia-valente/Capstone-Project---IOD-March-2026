@@ -1,3 +1,4 @@
+//
 import React from "react";
 import { useState, useEffect, useContext } from "react";
 
@@ -9,28 +10,41 @@ import ActivityChart from "../../components/activityChart/activityChart";
 function UserPage() {
   const [userName, setUserName] = useState("");
   const [userStartDate, setStartDate] = useState("");
-
-  // useEffect fetch data from backend here
+  const [userProgram, setUserProgram] = useState("");
+  const [userPaymentPlan, setUserPaymentPlan] = useState("");
+  const [userAge, setUserAge] = useState(0);
+  const [userGender, setUserGender] = useState("");
+  const [userCountry, setUserCountry] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userMobile, setUserMobile] = useState("");
+  const [loading, setLoading] = useState(true);
+  
+//useEFFECT
   useEffect(() => {
-    setUserName("Kit");
-    setStartDate("March 2026");
-  }, []);
-
-  /*
-  // Example: fetch data from backend
+    // Fetch data from backend
     fetch("https://example.com/api/user")  // replace with your backend URL
       .then((res) => res.json())
       .then((data) => {
-        setUserName(data.name);           // assume API returns { name: "Pia", startDate: "2022-01-01" }
-        setStartDate(data.startDate);
+        setUserName(`${data.firstName} ${data.lastName}`);
+        setStartDate(data.profile_created.split("T")[0]);  // Assuming the date is in ISO format
+        setUserProgram(data.program);
+        setUserPaymentPlan(data.payment_plan);
+
+        setUserAge(calculateAge(data.birthday));
+        setUserGender(data.gender);
+        setUserCountry(data.country);
+        setUserEmail(data.email);
+        setUserMobile(data.mobile);
+        
         setLoading(false);
       })
       .catch((err) => {
         console.error("Error fetching user:", err);
         setLoading(false);
       });
-  }, []); // empty array = run once when component loads
-*/
+  }, []);
+
+
 
   return (
     <Box
@@ -55,8 +69,8 @@ function UserPage() {
           mt="70px"
         >
           <ImageAvatar></ImageAvatar>
-          <h3>Pia Valente</h3>
-          <h5>Member since: 2025</h5>
+          <h3>{userName || "Loading.."}</h3>
+          <h5>{`Member since: ${userStartDate || "Loading.."}`}</h5>
         </Box>
 
         <Box
@@ -67,9 +81,9 @@ function UserPage() {
           alignItems="flex-start"
         >
           <h5>MEMBERSHIP DETAILS:</h5>
-          <h5>Program:</h5>
-          <h5>Payment Plan:</h5>
-          <h5>Status:</h5>
+          <h5>Program: {userProgram || "Loading..."}</h5>
+          <h5>Payment Plan: {userPaymentPlan || "Loading..."}</h5>
+          <h5>Status: {loading ? "Loading..." : "Active"}</h5>
         </Box>
 
         <Box
@@ -80,11 +94,11 @@ function UserPage() {
           alignItems="flex-start"
         >
           <h5>PERSONAL DETAILS:</h5>
-          <h5>Age</h5>
-          <h5>Gender:</h5>
-          <h5>Country:</h5>
-          <h5>Email</h5>
-          <h5>Mobile:</h5>
+          <h5>Age: {userAge || "Loading..."}</h5>
+          <h5>Gender: {userGender || "Loading..."}</h5>
+          <h5>Country: {userCountry || "Loading..."}</h5>
+          <h5>Email: {userEmail || "Loading..."}</h5>
+          <h5>Mobile: {userMobile || "Loading..."}</h5>
         </Box>
       </Box>
 

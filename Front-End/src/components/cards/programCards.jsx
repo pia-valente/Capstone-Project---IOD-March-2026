@@ -3,7 +3,7 @@ import { Typography, CardActions, Button } from "@mui/material";
 
 function ProgramCards({ program, image, description }) {
   return (
-    <Card sx={{ width: 350, height: 500, borderRadius: 10 }}>
+    <Card sx={{ width: 350, height: 600, borderRadius: 10 }}>
       <CardMedia
         component="img"
         alt={program}
@@ -13,7 +13,7 @@ function ProgramCards({ program, image, description }) {
 
       <CardContent>
         <Typography gutterBottom variant="h5" sx={{ color: "var(--primary-color)" }}>{program}</Typography>
-        <Typography variant="body2" sx={{ color: "var(--primary-color)" }}>{description}</Typography>
+        <Typography variant="body1" sx={{ color: "var(--primary-color)" }}>{description}</Typography>
       </CardContent>
       
       <CardActions>

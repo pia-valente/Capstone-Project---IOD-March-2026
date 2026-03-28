@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 
+
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -11,7 +12,7 @@ import Button from "@mui/material/Button";
 function Navbar({onLoginClick}) {
   return (
     <Box sx={{ width: "100%", backgroundColor: "var(--third-color)"}}>
-      <AppBar position="sticky" color="third" elevation={0} >
+      <AppBar sx={{ backgroundColor: "var(--third-color)", boxShadow: "none" }}>
         <Toolbar sx={{display: "flex", justifyContent: "space-between"}}>
             <Button sx={{textTransform: "none", color: "var(--text-color)", fontFamily: "Anton",fontSize: "32px", display: "flex", justifyContent: "flex-start"}} component={NavLink} to ="/">The FitKit</Button>
 

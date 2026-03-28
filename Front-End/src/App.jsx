@@ -12,17 +12,18 @@ function App() {
   const [showLogin, setShowLogin] = useState(false);
 
 
+//fetch backend here
+
+
   return (
       <Router>
       <NavBar onLoginClick={() => setShowLogin(true)}></NavBar>
       <AppRoutes></AppRoutes>
 
       {/*Modal login*/}
-      <LoginModal
-        isOpen={showLogin}
-        onClose={() => setShowLogin(false)}
-      ><LoginBox></LoginBox>
-      </LoginModal>
+      <LoginModal isOpen={showLogin} onClose={() => setShowLogin(false)}>
+          <LoginBox onClose={() => setShowLogin(false)} />
+        </LoginModal>
 
     </Router>
     
