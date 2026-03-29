@@ -19,7 +19,7 @@
     box-sizing: border-box;
     color: var(--third-color);
     margin: 0px;
-    padding: 40px 0px 0px 0px; 
+    padding: 20px 0px 0px 0px; 
 }
 
 .left-user-page-container h5 {
@@ -68,8 +68,13 @@
 }
 
 .welcome-container h2 {
+    font-size: 80px;
     margin: 0px;
     padding: 0px 0px 0px 40px;
+}
+
+.chart-container {
+  height: 300px;
 }
 
 .chart-container h5 {

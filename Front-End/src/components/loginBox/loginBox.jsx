@@ -16,6 +16,7 @@ function LoginBox({ loginBoxIsOpen, onClose }) { // Assuming onClose is passed a
   try {
     const res = await fetch("http://localhost:8081/api/members/login", {
       method: "POST",
+      credentials: "include",
       headers: {
         "Content-Type": "application/json",
       },
