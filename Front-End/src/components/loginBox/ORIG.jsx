@@ -80,7 +80,6 @@ function LoginBox({ loginBoxIsOpen, onClose }) { // Assuming onClose is passed a
           Not yet part of the community?{" "}
           <Link
             to="/signup"
-            onClick={onClose}
             style={{ fontStyle: "italic", color: "var(--text-color)" }}
           >
             Sign up here.

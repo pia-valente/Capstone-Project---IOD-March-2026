@@ -14,11 +14,12 @@ function Navbar({onLoginClick}) {
     <Box sx={{ width: "100%", backgroundColor: "var(--third-color)"}}>
       <AppBar sx={{ backgroundColor: "var(--third-color)", boxShadow: "none" }}>
         <Toolbar sx={{display: "flex", justifyContent: "space-between"}}>
-            <Button sx={{textTransform: "none", color: "var(--text-color)", fontFamily: "Anton",fontSize: "32px", display: "flex", justifyContent: "flex-start"}} component={NavLink} to ="/">The FitKit</Button>
+            <Button sx={{textTransform: "none", color: "var(--text-color)", fontFamily: "Anton",fontSize: "32px", display: "flex", justifyContent: "flex-start"}} component={NavLink} to ="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>The FitKit</Button>
 
             <Box sx={{ display: "flex", gap: 2 }}>
-                <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Home</Button>
+                <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px", }} component={NavLink} to ="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Home</Button>
                 
+
                 <ScrollLink to ="about" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>About</Button></ScrollLink>
                 <ScrollLink to ="programs" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Programs</Button></ScrollLink>
                 <ScrollLink to ="contact" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Contact</Button></ScrollLink>
