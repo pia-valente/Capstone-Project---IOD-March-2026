@@ -4,20 +4,30 @@ const Controllers = require("../Controllers");
 
 // GET /api/members
 router.get("/", (req, res) => {
-  Controllers.memberController.getMember(res);
+  Controllers.memberController.getMember(req, res);
 });
 
-// POST /api/members/create
+//GET current member
+router.get("/member", (req, res) => {
+  Controllers.memberController.getCurrentMember(req, res);
+});
+
+// CREATE/POST /api/members/create
 router.post("/create", (req, res) => {
-  Controllers.memberController.createMember(req.body, res);
+  Controllers.memberController.createMember(req, res);
 });
 
-// PUT  to /api/members/update/:id
+//LOGIN
+router.post("/login", (req, res) => {
+  Controllers.memberController.loginMember(req, res);
+});
+
+// UPDATE/PUT  to /api/members/update/:id
 router.put("/update/:memberId", (req, res) => {
   Controllers.memberController.updateMember(req, res);
 });
 
-// DELETE  to /api/members/delete/:id
+// DELETE/DELETE  to /api/members/delete/:id
 router.delete("/delete/:memberId", (req, res) => {
   Controllers.memberController.deleteMember(req, res);
 });

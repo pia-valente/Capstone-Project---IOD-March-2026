@@ -5,9 +5,9 @@ import { Box, Typography } from "@mui/material";
 function About(){
   return (
     <>
-      <Box id ="about" className="about-container" display="flex" flexDirection= "column" gap={0}>
+      <Box id ="about" className="about-container">
         <Box className="about-text-container" display="flex" flexDirection="row" justifyContent= "center"  gap={0}>
-          <Typography variant = "body1" align = "center" fontSize={18} marginTop= "40px">
+          <Typography variant = "body1" align = "center" fontSize={18} marginTop= "110px">
             My name is Kit. I’m a former preschool teacher turned fitness coach.<br></br>
             I’m originally from the Philippines but now residing in New Zealand.<br></br>
             I’m not the most jacked coach you’ll see at the gym (never wanted to be). <br></br>

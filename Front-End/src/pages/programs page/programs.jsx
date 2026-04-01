@@ -1,6 +1,6 @@
 import React from "react";
 import "./programs.css";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import ProgramCards from "../../components/cards/programCards";
 
 const cardData = [

@@ -20,12 +20,14 @@ body {
 }   
 
 h2 {
-    margin: 200px 0px 60px 0;
+    margin: 160px 0px 10px 0;
     padding: 0px 0px 0px 50px;
     line-height: 1
 }
 
 p {
+
     padding: 0px 0px 0px 50px;
-    align-self: right
+    align-self: right;
+    line-height: 1.8;
 }

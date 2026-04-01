@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { useNavigate } from "react-router-dom";
 import "./admin.css";
 
@@ -174,7 +174,7 @@ function Admin() {
       },
     },
     { field: "gender", headerName: "Gender", type: "string", valueOptions: ["Male", "Female", "Other"], width: 110, editable: true },
-    { field: "program", headerName: "Program", type: "string", width: 120, editable: true },
+    { field: "program", headerName: "Program", type: "string", width: 100, editable: true },
     { field: "paymentPlan", headerName: "Payment Plan", type: "string",
       valueOptions: ["Weekly", "Monthly", "Yearly"],
       width: 150,
@@ -191,24 +191,16 @@ function Admin() {
 //-----------------------------------------------------------------------------------------
 
   return (
-    <Box
-      className="admin-page-container"
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-    >
-      <Box
-        className="data-container"
-        display="flex"
-        flexDirection="column"
-        alignContent="flex-start"
-      >
+    <Box className="admin-page-container" display="flex" flexDirection="column" alignItems="center">
+      <Box className="data-container" display="flex" flexDirection="column" alignContent="flex-start">
         <h2>Members</h2>
         <Box height={500}>
           <ErrorBoundary>
             <DataGrid
               rows={rows}
               columns={columns}
+              slots={{toolbar:GridToolbar}}
+              showToolbar
               initialState={{
                 pagination: { paginationModel: { pageSize: 5 } },
               }}

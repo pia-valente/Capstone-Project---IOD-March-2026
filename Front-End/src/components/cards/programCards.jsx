@@ -3,7 +3,7 @@ import { Typography, CardActions, Button } from "@mui/material";
 
 function ProgramCards({ program, image, description }) {
   return (
-    <Card sx={{ width: 350, height: 600, borderRadius: 10 }}>
+    <Card sx={{ width: 350, height: 550, borderRadius: 10 }}>
       <CardMedia
         component="img"
         alt={program}

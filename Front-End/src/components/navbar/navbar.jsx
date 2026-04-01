@@ -26,8 +26,8 @@ function Navbar({onLoginClick}) {
                 <ScrollLink to ="community" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Project Flow</Button></ScrollLink>
                 <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }} onClick={onLoginClick}>Login</Button>
                 
-                <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }} component={NavLink} to= "/userpage" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>User Page</Button>
-                <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }} component={NavLink} to= "/adminpage" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Admin</Button>
+                {/*<Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }} component={NavLink} to= "/userpage" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>User Page</Button>*/}
+                {/*<Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }} component={NavLink} to= "/adminpage" style={({ isActive }) => ({fontWeight: isActive ? "bold" : "normal"})}>Admin</Button>*/}
 
                 
                 
