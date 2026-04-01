@@ -3,10 +3,14 @@ import { Box } from "@mui/material";
 import "./user-page.css";
 import ImageAvatar from "../../components/imageAvatar/imageAvatar";
 import ActivityChart from "../../components/activityChart/activityChart";
+import WhiteButton from "../../components/buttons/whiteButton/whiteButton"
+import { useNavigate} from "react-router-dom"
 
 function UserPage() {
   const [member, setMember] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   // Calculate accurate age
   function calculateAge(date) {
@@ -85,7 +89,7 @@ function UserPage() {
           className="personal-details-container"
           display="flex"
           flexDirection="column"
-          mt="70px"
+          mt="50px"
           alignItems="flex-start"
         >
           <h5>PERSONAL DETAILS:</h5>
@@ -94,6 +98,7 @@ function UserPage() {
           <h5>Country: {member?.country || "-"}</h5>
           <h5>Email: {member?.email || "-"}</h5>
           <h5>Mobile: {member?.mobile || "-"}</h5>
+          <WhiteButton sx={{ fontSize: "14px", padding: "6px 12px", minWidth: "80px", mt: "20px" }} onClick={() => navigate("/")}>Logout</WhiteButton>
         </Box>
       </Box>
 

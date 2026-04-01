@@ -1,41 +1,50 @@
-//
-import React from "react";
-import { useState, useEffect, useContext } from "react";
-
+import React, { useState, useEffect } from "react";
 import { Box } from "@mui/material";
 import "./user-page.css";
 import ImageAvatar from "../../components/imageAvatar/imageAvatar";
 import ActivityChart from "../../components/activityChart/activityChart";
 
 function UserPage() {
-  const [userName, setUserName] = useState("");
-  const [userStartDate, setStartDate] = useState("");
-  const [userProgram, setUserProgram] = useState("");
-  const [userPaymentPlan, setUserPaymentPlan] = useState("");
-  const [userAge, setUserAge] = useState(0);
-  const [userGender, setUserGender] = useState("");
-  const [userCountry, setUserCountry] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [userMobile, setUserMobile] = useState("");
+  const [member, setMember] = useState(null);
   const [loading, setLoading] = useState(true);
-  
-//useEFFECT
-  useEffect(() => {
-    // Fetch data from backend
-    fetch("https://example.com/api/user")  // replace with your backend URL
-      .then((res) => res.json())
-      .then((data) => {
-        setUserName(`${data.firstName} ${data.lastName}`);
-        setStartDate(data.profile_created.split("T")[0]);  // Assuming the date is in ISO format
-        setUserProgram(data.program);
-        setUserPaymentPlan(data.payment_plan);
 
-        setUserAge(calculateAge(data.birthday));
-        setUserGender(data.gender);
-        setUserCountry(data.country);
-        setUserEmail(data.email);
-        setUserMobile(data.mobile);
-        
+  // Calculate accurate age
+  function calculateAge(date) {
+    if (!date) return 0;
+
+    const birth = new Date(date);
+    const today = new Date();
+
+    let age = today.getFullYear() - birth.getFullYear();
+    const hasHadBirthday =
+      today.getMonth() > birth.getMonth() ||
+      (today.getMonth() === birth.getMonth() &&
+        today.getDate() >= birth.getDate());
+
+    if (!hasHadBirthday) age--;
+
+    return age;
+  }
+
+  useEffect(() => {
+    fetch("http://localhost:8081/api/members/member", {
+      
+      credentials: "include",
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch member");
+        return res.json();
+      })
+      .then((data) => {
+        const fetchedMember = data.member;
+
+        if (!fetchedMember) {
+          console.log("Not logged in");
+          setLoading(false);
+          return;
+        }
+
+        setMember(fetchedMember);
         setLoading(false);
       })
       .catch((err) => {
@@ -44,46 +53,32 @@ function UserPage() {
       });
   }, []);
 
-
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <Box
-      id="user-page"
-      className="user-page-container"
-      display="flex"
-      flexDirection="row"
-    >
-      {/*LEFT SIDE*/}
-      <Box
-        className="left-user-page-container"
-        display="flex"
-        flexDirection="column"
-      >
-        <Box
-          className="image-avatar-container"
-          display="flex"
-          flexDirection="column"
-          alignContent="center"
-          alignItems="center"
-          justifyContent="center"
-          mt="70px"
-        >
+    <Box id="user-page" className="user-page-container" display="flex" flexDirection="row">
+      {/* LEFT SIDE */}
+      <Box className="left-user-page-container" display="flex" flexDirection="column">
+        <Box className="image-avatar-container" display="flex" flexDirection="column" alignItems="center" justifyContent="center" mt="100px">
           <ImageAvatar></ImageAvatar>
-          <h3>{userName || "Loading.."}</h3>
-          <h5>{`Member since: ${userStartDate || "Loading.."}`}</h5>
+          <h3>{member?.name}</h3>
+          <h5>
+            Member since:{" "}
+            {member?.profile_created
+              ? new Date(member.profile_created).toLocaleDateString()
+              : "-"}
+          </h5>
         </Box>
 
-        <Box
-          className="membership-details-container"
-          display="flex"
-          flexDirection="column"
-          mt="70px"
-          alignItems="flex-start"
-        >
+        <Box className="membership-details-container" display="flex" flexDirection="column" mt="70px" alignItems="flex-start">
           <h5>MEMBERSHIP DETAILS:</h5>
-          <h5>Program: {userProgram || "Loading..."}</h5>
-          <h5>Payment Plan: {userPaymentPlan || "Loading..."}</h5>
-          <h5>Status: {loading ? "Loading..." : "Active"}</h5>
+          <h5>Program: {member?.program || "-"}</h5>
+          <h5>Payment Plan: {member?.paymentPlan || "-"}</h5>
+          <h5>
+            Status: {member?.is_active ? "Active" : "Inactive"}
+          </h5>
         </Box>
 
         <Box
@@ -94,32 +89,29 @@ function UserPage() {
           alignItems="flex-start"
         >
           <h5>PERSONAL DETAILS:</h5>
-          <h5>Age: {userAge || "Loading..."}</h5>
-          <h5>Gender: {userGender || "Loading..."}</h5>
-          <h5>Country: {userCountry || "Loading..."}</h5>
-          <h5>Email: {userEmail || "Loading..."}</h5>
-          <h5>Mobile: {userMobile || "Loading..."}</h5>
+          <h5>Age: {calculateAge(member?.birthday)}</h5>
+          <h5>Gender: {member?.gender || "-"}</h5>
+          <h5>Country: {member?.country || "-"}</h5>
+          <h5>Email: {member?.email || "-"}</h5>
+          <h5>Mobile: {member?.mobile || "-"}</h5>
         </Box>
       </Box>
 
-      {/*RIGHT SIDE*/}
-      <Box className="right-user-page-container" display="flex" flexDirection="column">
-
+      {/* RIGHT SIDE */}
+      <Box
+        className="right-user-page-container"
+        display="flex"
+        flexDirection="column"
+      >
         <Box className="welcome-container" mt="70px">
-          <h2>Welcome back, Pia</h2>
+          <h2>Welcome back, {member?.name}</h2>
         </Box>
 
-        <Box className="chart-container" mt="20px">
+        <Box className="chart-container" mt="20px" height="300px">
           <h5>Workouts Completed</h5>
-          <ActivityChart></ActivityChart>
-
+          <ActivityChart />
         </Box>
-
-
       </Box>
-
-
-
     </Box>
   );
 }

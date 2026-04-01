@@ -38,7 +38,7 @@ function Programs() {
   return ( 
     <Box id="programs" className="programs-page-container">
       <Box className="header">
-        <h2>Programs</h2>
+        <h2>Programmes</h2>
       </Box>
 
       <Box className="cards" display="flex" flexDirection="row">

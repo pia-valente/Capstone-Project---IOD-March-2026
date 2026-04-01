@@ -21,7 +21,7 @@ function Navbar({onLoginClick}) {
                 
 
                 <ScrollLink to ="about" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>About</Button></ScrollLink>
-                <ScrollLink to ="programs" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Programs</Button></ScrollLink>
+                <ScrollLink to ="programs" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Programmes</Button></ScrollLink>
                 <ScrollLink to ="contact" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Contact</Button></ScrollLink>
                 <ScrollLink to ="community" smooth={true} duration={500} style = {{textDecoration: "none"}}><Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }}>Project Flow</Button></ScrollLink>
                 <Button variant = "text" sx={{textTransform: "none", color: "var(--text-color)", fontSize: "22px" }} onClick={onLoginClick}>Login</Button>

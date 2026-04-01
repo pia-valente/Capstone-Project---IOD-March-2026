@@ -1,9 +1,10 @@
 import Button from "@mui/material/Button";
 
-function whiteButton({children}) {
+function WhiteButton({children, sx={}, ...props}) {
   return (
     <Button
       variant="contained"
+      {...props}
       sx={{
         color: "var(--primary-color)",
         backgroundColor: "var(--third-color)",
@@ -11,6 +12,7 @@ function whiteButton({children}) {
         padding: "8px 16px",
         minWidth: "100px",
         borderRadius: "30px",
+        ...sx, //allows override
       }}
     >
       {children}
@@ -18,4 +20,4 @@ function whiteButton({children}) {
   );
 }
 
-export default whiteButton;
+export default WhiteButton;
