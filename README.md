@@ -34,7 +34,7 @@ PORT=8081
 CREATE DATABASE TheFitKit
 
 5. Run Backend
-npm run dev
+npm start
 
 6. Split terminal and open Front-End folder
 cd front-end
