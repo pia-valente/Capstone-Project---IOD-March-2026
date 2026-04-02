@@ -15,7 +15,7 @@ INSTRUCTIONS:
 To locally run the application:
 
 1. Clone the project
-git clone https://github.com/pia-valente/2025-10-07-SE-PT-AU-NZ.git
+https://github.com/pia-valente/2025-10-07-SE-PT-AU-NZ.git
 cd 2025-10-07-SE-PT-AU-NZ
 
 2. Open the folder and open Back-End folder
